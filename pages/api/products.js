@@ -35,7 +35,7 @@ export default async function handle(req, res) {
       categories,
       cardImage,
       price,
-      discountedPrice,
+      tourLength,
       hasDiscount,
     } = req.body;
 
@@ -45,7 +45,7 @@ export default async function handle(req, res) {
       categories,
       cardImage,
       price,
-      discountedPrice,
+      tourLength,
       hasDiscount,
     });
     res.json(productDoc);
@@ -58,7 +58,7 @@ export default async function handle(req, res) {
       categories,
       cardImage,
       price,
-      discountedPrice,
+      tourLength,
       hasDiscount,
       _id,
     } = req.body;
@@ -71,7 +71,7 @@ export default async function handle(req, res) {
         categories,
         cardImage,
         price,
-        discountedPrice,
+        tourLength,
         hasDiscount,
       }
     );

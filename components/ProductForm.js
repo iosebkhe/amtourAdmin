@@ -16,11 +16,8 @@ export default function ProductForm({
   categories: assignedCategories,
   cardImage: existingCardImage,
   price: existingPrice,
-  // discountedPrice: existingDiscountedPrice,
-  // hasDiscount: existingHasDiscount
+  tourLength: existingTourLength,
 }) {
-  // const assignedCategoryIds = assignedCategories.map(category => category._id);
-
   const [title, setTitle] = useState(existingTitle || "");
   const [fullDescription, setFullDescription] = useState(
     existingFullDescription || ""
@@ -34,8 +31,7 @@ export default function ProductForm({
   });
   const [cardImage, setCardImage] = useState(existingCardImage || "");
   const [price, setPrice] = useState(existingPrice || "");
-  // const [discountedPrice, setDiscountedPrice] = useState(existingDiscountedPrice || "");
-  // const [hasDiscount, setHasDiscount] = useState(existingHasDiscount || false);
+  const [tourLength, setTourLength] = useState(existingTourLength || "");
 
   const [goToProducts, setGoToProducts] = useState(false);
   const [isCardImageUploading, setIsCardImageUploading] = useState(false);
@@ -77,6 +73,7 @@ export default function ProductForm({
       categories,
       cardImage,
       price,
+      tourLength,
     };
     if (_id) {
       //update
@@ -175,6 +172,16 @@ export default function ProductForm({
           placeholder="ფასი"
           value={price}
           onChange={(ev) => setPrice(ev.target.value)}
+        />
+      </div>
+
+      <div>
+        <label className="mb-3 inline-block">ტურის ხანგძლივობა</label>
+        <input
+          type="number"
+          placeholder="ტურის ხანგძლივობა"
+          value={tourLength}
+          onChange={(ev) => setTourLength(ev.target.value)}
         />
       </div>
 

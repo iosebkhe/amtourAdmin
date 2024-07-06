@@ -5,7 +5,7 @@ import mime from "mime-types";
 import { mongooseConnect } from "@/lib/mongoose";
 import { isAdminRequest } from "@/pages/api/auth/[...nextauth]";
 
-const bucketName = "amtour-test";
+const bucketName = "amtour-main";
 
 export default async function handle(req, res) {
   await mongooseConnect();
